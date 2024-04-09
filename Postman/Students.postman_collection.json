@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "f1c7e870-e088-4659-bc33-f9627093f507",
+		"name": "Students",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8083866"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Edgar\",\r\n  \"lastName\": \"Hernandez\",\r\n  \"identification\": 123456,\r\n  \"email\": \"eh@gmail\",\r\n  \"phoneNumber\": \"245545\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/CreateStudent",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"CreateStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Edgar\",\r\n    \"lastName\": \"Hernandez\",\r\n    \"identification\": 1234567,\r\n    \"email\": \"eh@gmail\",\r\n    \"phoneNumber\": \"245545\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/UpdateStudent",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"UpdateStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/DeleteStudent",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"DeleteStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"columnOrder\": \"CreatedOn\",\r\n  \"desc\": true,\r\n  \"page\": 1,\r\n  \"search\": \"123\",\r\n  \"rowsPage\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/GetStudents",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"GetStudents"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

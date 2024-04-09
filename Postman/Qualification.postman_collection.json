@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "ff0fcd92-29b6-4c79-98c7-7f9bf62fc704",
+		"name": "Qualification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8083866"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"score\": \"10\",\r\n  \"courseId\": 2,\r\n  \"teacherId\": 1,\r\n  \"studentId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/CreateQualification",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"CreateQualification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"score\": \"56\",\r\n  \"courseId\": 1,\r\n  \"studentId\": 2,\r\n  \"teacherId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/UpdateQualification",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"UpdateQualification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/DeleteQualification",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"DeleteQualification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"columnOrder\": \"CreatedOn\",\r\n  \"desc\": true,\r\n  \"page\": 1,\r\n  \"search\": \"\",\r\n  \"rowsPage\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/GetQualifications",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"GetQualifications"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
